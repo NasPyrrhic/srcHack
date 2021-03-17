@@ -457,7 +457,15 @@
                       data-widget-key="dates"
                       data-widget-template="date_template"
                     >
-                      <!-- here will go the date info -->
+                      <span>
+                        <span data-template-key="day_name">Sunday</span
+                        ><span data-template-key="comma_1">, </span
+                        ><span data-template-key="day">14</span>
+                        <span data-template-key="month_name">March</span>
+                        <span data-template-key="year">2021</span
+                        ><span data-template-key="comma_2">, </span
+                        ><span data-template-key="time">7:00 PM</span>
+                      </span>
                     </p>
                     <div
                       class="custom_time_zone_convert custom_text_muted_special js_timezone_text mt-1"
@@ -469,9 +477,9 @@
                           data-widget-dynamic="true"
                           data-widget-type="wj-timezone"
                           data-widget-key="timezone"
+                          >Amsterdam, Berlin, Bern, Rome, Stockholm, Vienna GMT
+                          +1</span
                         >
-                          <!-- here will go the zone time info -->
-                        </span>
                       </p>
                     </div>
                     <button
@@ -510,7 +518,8 @@
                       data-widget-key="liveLink"
                       data-widget-type="wj-text"
                       data-widget-update-attributes="href,html"
-                    ></a>
+                      >https://event.webinarjam.com/go/live/6/24v3xs6cl4h41v6al2ok</a
+                    >
                   </p>
                 </div>
                 <div
@@ -1049,7 +1058,6 @@
         </span>
       </div>
     </div>
-
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"
       crossorigin="anonymous"
@@ -1064,97 +1072,6 @@
       rel="stylesheet"
       type="text/css"
     />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/jquery-countdown/2.0.2/jquery.countdown.css"
-    /><style>
-      *,
-      *:before,
-      *:after {
-        box-sizing: border-box;
-      }
-
-      hr.my-5 {
-        display: none !important;
-      }
-
-      img.main_logo {
-        display: none !important;
-      }
-
-      #clock {
-        max-width: 35em;
-        margin: auto;
-        margin-bottom: 4em;
-      }
-
-      .is-countdown {
-        background: none;
-        border: none;
-      }
-
-      .countdown-row {
-        display: block;
-      }
-
-      .countdown-row:after {
-        display: table;
-        content: "";
-        clear: both;
-      }
-
-      .countdown-section {
-        width: 80px !important;
-        padding: 0 10px;
-        display: inline-block;
-        float: none;
-      }
-
-      .countdown-amount {
-        line-height: 50px !important;
-        border-radius: 100%;
-        display: block;
-        background: #2f2f2f;
-        color: #fff !important;
-        font-weight: bold;
-        border: 5px solid #000;
-        box-shadow: inset 1px 0 0 2px rgba(255, 255, 255, 0.1);
-      }
-
-      .countdown-period {
-        margin-top: 8px;
-        text-transform: uppercase;
-      }
-
-      #clock-title {
-        color: #2f2f2f;
-        text-align: center;
-        font-size: 28px;
-        margin-bottom: 10px;
-        text-transform: uppercase;
-      }
-
-      @media screen and (max-width: 768px) {
-        .header hr {
-          display: none;
-        }
-
-        .container.paddingTop {
-          padding-top: 10px;
-        }
-
-        #clock {
-          margin-bottom: 20px;
-        }
-      }
-    </style>
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-countdown/2.0.2/jquery.plugin.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-countdown/2.0.2/jquery.countdown.min.js"></script>
-
-    <script src="./scripts/getUrlParams.js"></script>
-    <script src="./scripts/countDownClock.js"></script>
-
     <script>
       $().ready(function () {
         function initVideo() {
@@ -1201,6 +1118,767 @@
 
         initVideo();
       });
+    </script>
+    <script>
+      window["wj"] = "undefined" === typeof window["wj"] ? [] : window["wj"];
+      window["wj"]["translations"] =
+        "undefined" === typeof window["wj"]["translations"]
+          ? []
+          : window["wj"]["translations"];
+
+      window["wj"]["translations"] = {
+        Msg_register_webinar: "Webinar Registration",
+        Msg_webinar_presenters: "Webinar presenters",
+        Msg_webinar_title: "Webinar title",
+        Msg_webinar_description: "Webinar description",
+        Msg_enter_firstname: "First name...",
+        Msg_enter_email: "Email...",
+        Msg_country_code: "Select country...",
+        Msg_phone_number: "Phone number...",
+        Msg_register_now: "REGISTER NOW",
+        Msg_copyright: "Copyright",
+        Msg_allrights_reserved: "All Rights Reserved",
+        Msg_powered_by: "Powered by",
+        Msg_reserve_click:
+          "To reserve your seat for this webinar, click the button below to activate the registration form.",
+        Msg_reserve_seat_webinar: "Reserve your seat for this webinar!",
+        Msg_join_webinar: "JOIN WEBINAR",
+        Msg_registration_fee: "Registration fee",
+        Msg_pay_register: "PAY TO REGISTER",
+        Msg_share_webinar: "Share this webinar!",
+        Msg_signingup_tellfriends:
+          "Are you signing up for this webinar? Tell your friends to join too!",
+        Msg_live_reserve: "Live Webinar Event: Reserve Your Seat!",
+        Msg_reserve_seat: "Reserve your seat",
+        Msg_join_event: "Join this webinar event!",
+        Msg_webinar_hostedby: "Hosted by",
+        Msg_live_event: "Live Webinar Event",
+        Msg_join_this_webinar: "join this webinar",
+        Msg_enter_name: "Please enter your name",
+        Msg_valid_email: "Please enter a valid email address",
+        Msg_wait_loading: "Please wait while loading",
+        Msg_congratulations_registered:
+          "Congratulations... You\u0027ve been registered!",
+        Msg_webinar_details: "WEBINAR DETAILS",
+        Text_date: "Date",
+        Text_time: "Time",
+        Text_webinar: "Webinar",
+        Text_presenters: "Presenters",
+        Msg_link_webinar: "Here is your link to the webinar",
+        Msg_save_bookmark: "Save and bookmark this URL to access the webinar",
+        Msg_schedule_reminder: "Set a reminder on your calendar",
+        Msg_add_googlecalendar: "ADD TO GOOGLE CALENDAR",
+        Msg_add_icaloutlook: "ADD TO iCAL \/ OUTLOOK",
+        Msg_too_early: "Congratulations... we\u0027ll be starting soon!",
+        Msg_webinar_starting: "Webinar starting in...",
+        Text_days: "DAYS",
+        Text_hours: "HOURS",
+        Text_mins: "MINS",
+        Text_secs: "SECS",
+        Msg_enter_webiroom: "Enter the webinar room",
+        Msg_broadcasting: "Broadcasting...",
+        Text_presenter: "Presenter",
+        Msg_starting_soon: "Starting soon...",
+        Msg_presenter_shortly:
+          "The webinar presenter will start broadcasting shortly.",
+        Msg_like_event: "Like this event?",
+        Msg_tell_friends: "Tell your friends to join us now!",
+        Text_chat: "Chat",
+        Text_polls: "Polls",
+        Text_attendees: "Attendees",
+        Text_popins: "Pop-ins",
+        Text_videos: "Videos",
+        Msg_chat_admin: "CHAT (admin)",
+        Msg_enable_chatbox: "Enable chat box",
+        Msg_messages_public: "All messages are public",
+        Msg_messages_private: "All messages are private",
+        Msg_allow_publicprivate_messages:
+          "Allow both public and private messages",
+        Msg_display_sticky_message: "Display a sticky message",
+        Msg_display_sticky: "Display sticky",
+        Msg_remove_sticky: "Remove sticky",
+        Msg_displayed_sticky: "Displayed as sticky",
+        Msg_remove_sticky2: "Remove sticky",
+        Msg_chat_public: "CHAT (public)",
+        Msg_public_comment_chat: "Public comment to chat",
+        Msg_private_comment_admin: "Private comment to admin",
+        Text_post: "Post",
+        Msg_admin_notice: "Admin notice",
+        Text_to_coadmins: "to co-admins",
+        Msg_polls_admin: "POLLS (admin)",
+        Msg_poll_question: "Poll question",
+        Msg_poll_option: "Poll option",
+        Msg_add_poll_option: "Add poll option",
+        Msg_remove_poll_option: "Remove poll option",
+        Msg_make_results_public: "Make results public at the end of poll",
+        Msg_start_poll: "Start poll",
+        Msg_poll_started: "Poll started",
+        Msg_end_poll: "End poll",
+        Msg_poll_ended: "Poll ended",
+        Msg_reset_poll: "Reset poll",
+        Text_polls_public: "POLLS (public)",
+        Text_vote: "Vote",
+        Msg_thanks_vote: "THANKS FOR YOUR VOTE!",
+        Msg_attendees_admin: "ATTENDEES (admin)",
+        Msg_make_attendeelist_public: "Make the attendee list public",
+        Msg_redirect_attendees_url:
+          "Redirect all attendees to the following URL",
+        Msg_open_newtab: "Open in a new tab",
+        Msg_redirect_them: "Redirect them",
+        Text_done: "Done",
+        Msg_attendees_public: "ATTENDEES (public)",
+        Msg_currently_in_room: "Currently in room",
+        Msg_private_msg_this_user: "Private message this user",
+        Msg_ban_this_user: "Ban this user",
+        Text_sent: "Sent!",
+        Msg_to: "to",
+        Msg_popins_admin: "POP INS (admin)",
+        Msg_popins_offers: "Pop-in offers",
+        Msg_display_offer: "Display offer",
+        Msg_remove_offer: "Remove offer",
+        Msg_offer_displayed: "Offer displayed",
+        Msg_create_offer_fly: "Create a new offer on the fly",
+        Msg_offer_headline: "Offer headline",
+        Msg_max_50_chars: "Maximum 50 characters",
+        Msg_offer_imageurl_optional: "Offer image URL (optional)",
+        Msg_msg_above_button: "Message above button",
+        Msg_example_buy_now: "Example: \u0027Buy now at \u0027",
+        Msg_text_within_button: "Text within button",
+        Msg_add_to_cart: "Add to cart",
+        Msg_download_now: "Download now",
+        Msg_signup_today: "Sign up today",
+        Msg_check_it_out: "Check it out",
+        Msg_get_started: "Get started",
+        Msg_show_me_more: "Show me more",
+        Msg_im_interested: "I\u0027m interested",
+        Msg_button_link: "Button link URL",
+        Msg_footer_overlay: "Footer overlay",
+        Msg_webinar_topic: "Webinar topic",
+        Msg_display_footer: "Display footer",
+        Msg_remove_footer: "Remove footer",
+        Msg_footer_displayed: "Footer displayed",
+        Msg_popins_public: "POP INS (public)",
+        Msg_videos_admin: "VIDEOS (admin)",
+        Msg_preconfigured_videos: "Pre-configured videos",
+        Msg_start_video: "Start video",
+        Msg_video_started: "Video started",
+        Msg_load_video: "Load video",
+        Msg_resume_hangout: "Resume hangout",
+        Msg_videos_public: "VIDEOS (public)",
+        Msg_chatroll_off: "The chat roll is currently turned off",
+        Msg_no_active_poll: "No active poll running at this moment",
+        Msg_attendeelist_private: "The attendee list is currently kept private",
+        Msg_no_message_displayed: "No message is currently being displayed",
+        Msg_from_admin: "from admin",
+        Msg_to_admin: "Send to admin only...",
+        Msg_sorry_revoked:
+          "sorry, but your access to this webinar has been revoked by the administrator",
+        Msg_sorry_late: "Sorry, you\u0027re late!",
+        Msg_webinar_expired: "This webinar has expired!",
+        Text_questions: "Questions",
+        Text_question: "QUESTION",
+        Msg_question_sendit: "GOT A QUESTION? EMAIL US!",
+        Text_submit: "submit",
+        Msg_message_not_sent: "message not sent!",
+        Msg_message_sent: "Email sent!",
+        Msg_detach_sidebar: "Detach sidebar",
+        Msg_attach_sidebar: "Attach sidebar",
+        Msg_congrats: "Congratulations",
+        Msg_admin_now: "You\u0027re an admin now!",
+        Msg_unique_adminlink: "Here\u0027s your unique admin login link",
+        Msg_waiting_creator:
+          "We\u0027re waiting for the webinar creator to login the live room",
+        Msg_once_login:
+          "Once he\/she logs in, you will be automatically redirected to the webinar room too. In the mean time, please wait.",
+        Month_january: "January",
+        Month_february: "February",
+        Month_march: "March",
+        Month_april: "April",
+        Month_may: "May",
+        Month_june: "June",
+        Month_july: "July",
+        Month_august: "August",
+        Month_september: "September",
+        Month_october: "October",
+        Month_november: "November",
+        Month_december: "December",
+        Day_monday: "Monday",
+        Day_tuesday: "Tuesday",
+        Day_wednesday: "Wednesday",
+        Day_thursday: "Thursday",
+        Day_friday: "Friday",
+        Day_saturday: "Saturday",
+        Day_sunday: "Sunday",
+        Text_am_pm: "AM \/ PM",
+        Msg_date_time: "Select date and time",
+        Msg_all_paid: "Don\u0027t forget to complete your registration!",
+        Msg_paid_registernow: "You may register to the webinar now",
+        Msg_ended_sittight:
+          "This Webinar had ended! sit tight, we are taking you to the recorded replay",
+        Msg_must_datetime: "You must select a date and time for your webinar",
+        Msg_options_now: "You have 2 options now",
+        Msg_comeback: "Come back at the webinar appointed time and date.",
+        Msg_keep_page_open:
+          "Keep this page open, so when the countdown ticks to zero, you will be automatically redirected to the webinar live room.",
+        Msg_loading_presentation: "Loading presentation",
+        Msg_emailed_admin: "message emailed to the webinar admin",
+        Msg_already_sent_question: "You have already sent a question",
+        Msg_not_sent: "ERROR: Message not sent!",
+        Msg_qbox_disabled: "Questions have been disabled for this event",
+        Msg_type_question: "Write Your Question Here...",
+        Msg_sms_activated: "SMS reminder activated",
+        Msg_been_registered: "You\u0027ve been registered!",
+        Msg_receive_sms: "Receive a SMS reminder on your phone",
+        Text_too_early: "You\u0027re too early",
+        Text_not_start_yet: "We haven\u0027t started yet!",
+        Msg_video_audio_muted:
+          "Admins video and audio signals are muted while on video mode",
+        Msg_confirmed_admin_acc: "Confirmed Admin account",
+        Text_right_now: "Right now",
+        Msg_enter_countrycode: "please select country code",
+        Msg_enter_phonenumber: "please enter Phone number",
+        Msg_poll_has_ended: "THIS POLL HAS ENDED!",
+        Msg_popup_blocker:
+          "IMPORTANT: make sure there is no popup blocker activated in your internet browser",
+        Msg_poll_on_fly: "Create poll on the fly",
+        Msg_admin_system_notice: "Admin system notice",
+        Msg_reminder_attendees_window:
+          "Reminder: the attendee list is NOT displayed on your attendees\u0027 window",
+        Msg_button_notclickable:
+          "This button is not clickable while a pre-recorded video is playing",
+        Text_video_displayed: "Video displayed",
+        Text_reply_privately: "Reply privately",
+        Text_delete_comment: "Delete comment",
+        Msg_relogin_hangout:
+          "Please relogin to the hangout using your admin hangout link",
+        Text_private: "private",
+        Text_name_surname: "Name and surname",
+        Msg_max_40_chars: "Max 40 characters",
+        Text_live_webinar_event: "Live webinar event!",
+        Msg_hello_there: "Hello there!",
+        Msg_admin_confirmed_email:
+          "Congratulations! You have confirmed your status as a presenter\/moderator for the following upcoming webinar",
+        Msg_unique_admin_link:
+          "Here\u0027s your unique presenter\/admin link to the webinar room",
+        Msg_loginas_moderator: "Log in as a moderator\/presenter",
+        Msg_webinar_invitation: "Webinar invitation!",
+        Msg_invited_email:
+          "You have just been invited as a presenter\/admin to the following webinar",
+        Text_important: "IMPORTANT",
+        Msg_accept_invitation:
+          "In order to accept the invitation to this webinar, you must click on the confirmation link below!",
+        Msg_agree_presenter: "Yes, I agree to be a presenter\/moderator",
+        Msg_webinar_question_posted: "Webinar Question Posted",
+        Text_sender: "Sender",
+        Text_message: "Message",
+        Text_send_to: "Send to",
+        Text_everybody: "everybody",
+        Text_reply: "Reply",
+        Msg_preview_only: "sorry this page is a preview mode only",
+        Msg_generate_preview:
+          "Generating preview\u00e2\u20ac\u00a6 please wait...",
+        Text_preferred_datetime: "choose your preferred date and time",
+        Msg_not_receive_notifs:
+          "Do not receive future email notifications about this webinar",
+        Text_unsubscribe: "unsubscribe",
+        Text_firstname: "First name",
+        Text_dateandtime: "Date and time",
+        Text_emailaddress: "Email address",
+        Text_phonenumber: "Phone number",
+        Msg_select_date: "Select date...",
+        Msg_select_time: "Select Time",
+        Msg_select_date_first: "Select Date First",
+        Msg_convert_timezone: "Convert to other timezone",
+        Msg_valid_country_code: "Please select a country code",
+        Msg_valid_phone_number: "Please enter a valid phone number",
+        Msg_phone_reminder: "Set a phone reminder!",
+        Msg_remind_before_webinar: "Remind me before the webinar",
+        Msg_sorry_webinar_not_available:
+          "Sorry... this webinar is no longer available.",
+        Msg_our_apologies: "Our apologies, but...",
+        Msg_webinar_expired_down:
+          "This webinar has either expired or it\u0027s been taken down by the webinar admin.",
+        Msg_webinar_ended_already: "Oops... this webinar has ended already!",
+        Msg_sit_tight: "Sit tight, the host will initiate the event soon.",
+        Msg_redirecting_to_replay: "Redirecting to the webinar replay",
+        Text_play_video: "Play Video",
+        Text_end_video: "End video and resume live hangout",
+        Text_to_everybody: "Send to everybody...",
+        Text_edit: "Edit",
+        Text_confirm_delete_chat_line: "Yes, erase this line",
+        Text_cancel: "Cancel",
+        Text_confirm_ban_user: "Yes, ban user",
+        Text_ban: "Ban",
+        Text_optional: "optional",
+        Text_load: "Load",
+        Msg_offer_imageurl: "Offer image URL",
+        Text_video_url: "Video URL",
+        Text_video_duration: "Video Duration",
+        Text_video_ends_in: "Video ends in",
+        Text_hours_short: "Hrs",
+        Text_minutes_short: "Mins",
+        Text_seconds_short: "Secs",
+        Text_write_sticky: "Write here your sticky message...",
+        Text_attendees_private: "Displayed only for admin, not public",
+        Text_mark_as_answer: "Mark as answer",
+        Text_mark_as_question: "Mark as question",
+        Text_write_message: "Type your comment...",
+        Text_select_poll: "Select Poll",
+        Text_create_poll: "Create new poll",
+        Text_reset_offer: "Reset offer",
+        Text_select_offer: "Select offer",
+        Text_select_video: "Select video",
+        Text_create_video: "Create new video",
+        Text_chat_disabled: "Chat has been disabled for this event",
+        Text_closed_at_the_moment: "are closed at the moment",
+        Text_erase: "Erase",
+        Txt_waiting_superadmin: "The webinar creator has not logged in yet...",
+        Txt_waiting_superadmin_detailed:
+          "As soon as the webinar creator logs in, you will be redirected to the live room.",
+        Txt_presented_by: "Presented by",
+        Txt_Email_LoginToWebinar: "Join the webinar",
+        Txt_Email_Congrats:
+          "Congratulations! You have successfully registered.",
+        Txt_Email_bookmark:
+          "The best thing you can do now is to bookmark your webinar link, and to set a reminder on your calendar so you don\u0027t miss the webinar.",
+        Txt_Email_WebinarDetails: "Here are the webinar details:",
+        Txt_email_SeeYou: "See you at the webinar!",
+        Txt_Email_Unsub1:
+          "You are receiving this email because you registered for this Webinar. You can unsubscribe to stop receiving notifications on this webinar",
+        Txt_Email_Unsub2:
+          "Unsubscribe to stop receiving notifications about this webinar",
+        Txt_Email_RegistrationSubject: "Your webinar confirmation",
+        Txt_Email_StartingSoonSubject: "Webinar starting soon",
+        Txt_Email_ReplaySubject: "Your webinar replay is ready",
+        Txt_Email_WebinarNotification: "Webinar notification",
+        Msg_offer_name: "Offer name",
+        Msg_own_reference: "For your own reference",
+        Txt_click: "Click",
+        Txt_here: "here",
+        Txt_convert_tz: "to convert to another time zone",
+        Txt_at: "at",
+        Txt_time_left_until_start: "Time left until webinar starts...",
+        Txt_attention: "ATTENTION",
+        Txt_thank_you: "Thank you!",
+        Txt_payment_completed:
+          "Your payment has been completed, and an email with the details of your transactions has been emailed to you.",
+        Txt_register: "Register",
+        Txt_redirecting: "Redirecting...",
+        Txt_close: "Close",
+        Txt_webinar_schedule: "Webinar schedule",
+        Txt_non_available_dates: "Non available dates",
+        Txt_available_dates: "Available dates",
+        Txt_your_details: "Your details",
+        Txt_login: "Enter room",
+        Txt_forwarded_details:
+          "Your details will be forwarded to the webinar organizer, who might communicate with you regarding this event or their services",
+        Txt_price_to_attend: "Price to attend",
+        Txt_proceed_to_checkout: "Proceed to checkout",
+        Txt_error_input_data:
+          "There was an error processing your input data.  Please make sure all fields are valid and try again!",
+        Txt_access_denied: "Access denied",
+        Txt_sorry_but: "Oops! Sorry, but...",
+        Txt_restricted_access:
+          "The webinar administrator has restricted your access",
+        Txt_webinar_ended: "This webinar has ended",
+        Txt_link_live_room: "Your link to the webinar room",
+        Txt_receive_sms_short: "Receive an SMS reminder",
+        Txt_offers_end_in: "Offer ends in",
+        Txt_available_copies: "Available units",
+        Txt_request_to_speak: "Request to speak",
+        Txt_cancel_request_to_speak: "Cancel request",
+        Txt_select_timezone: "Select timezone",
+        Txt_select_date_time_first: "Select date and time first",
+        Txt_send: "SEND EMAIL",
+        Txt_type_question: "Type your question here...",
+        Txt_has_purchased: "has purchased",
+        Txt_complete_registration: "Complete your registration",
+        Txt_replay_not_available: "The replay video is not available!",
+        Txt_sorry_noreplay: "We have no replay for this webinar",
+        Txt_noreplay_detailed:
+          "It seems like no actual live session has been conducted yet!",
+        Txt_poll: "Poll",
+        Txt_offer: "Offer",
+        Txt_instant_replay: "Watch yesterday\u0027s replay now",
+        Txt_submit_survey: "Submit survey",
+        Txt_open: "Open",
+        Txt_unmute_chat: "Click to unmute the chat",
+        Txt_mute_chat: "Click to mute the chat",
+        Txt_chat: "Chat",
+        Txt_ask_a_question: "Ask a question",
+        Txt_chat_muted: "Chat muted",
+        Txt_chat_unmuted: "Chat unmuted",
+        Msg_survey_completed: "Thank you for completing the survey!",
+        Txt_chat_disabled: "Chat is currently disabled",
+        Msg_auto_subscribe_host: "Auto-subscribe to future webinars hosted by",
+        Msg_auto_subscribed_future:
+          "You will be automatically subscribed to any webinar this host conducts in the near future",
+        Txt_yes_subscribe_me: "Yes, subscribe me",
+        Txt_unsubscribe_anytime: "You can unsubscribe at any time",
+        Txt_check_email_now: "Check your email now",
+        Msg_email_confirmation_link:
+          "We have just sent an email with a confirmation link to",
+        Msg_click_confirm_auto_subscription:
+          "Please click on that link to confirm your auto-subscription",
+        Txt_audio_video_problem: "Problems with audio or video",
+        Txt_reconnect: "Reconnect",
+        Txt_show: "Show",
+        Txt_hide: "Hide",
+        Txt_chat_room_full: "Chat room is full. You are in read-only mode.",
+        Msg_webinar_remind_me: "SMS",
+        Msg_print_out: "Print out",
+        Msg_print_out_advice: "Stick this page next to your computer",
+        Msg_print_out_this_page: "Print this page",
+        Txt_receive_sms_15_min: "15 minutes before the webinar",
+        Txt_calendar_reminder: "Calendar reminder",
+        Txt_sms_reminder: "SMS reminder",
+        Msg_thanks_for_attending: "Thanks for attending!",
+        Msg_enjoy_webinar: "How did you enjoy this event?",
+        Msg_thanks_for_feedback: "Thanks for your feedback!",
+        Msg_want_host_webinar: "Want to host your own WebinarJam session?",
+        Msg_get_trial: "START YOUR ACCOUNT",
+        Msg_enter_password: "Password...",
+        Msg_invalid_login: "Invalid Login",
+        Msg_enter_lastname: "Last name...",
+        MSG_post_payment_proceed_signup:
+          "You may now proceed to register for this webinar.",
+        MSG_post_payment_join_next_event: "Join Us In Our Next Event",
+        MSG_register: "Register to this event",
+        MSG_login: "Login to this event",
+        MSG_welcome: "Welcome",
+        MSG_broadcast_starts_shortly: "The broadcast will start shortly...",
+        MSG_dont_be_shy: "Don\u0027t be shy... start chatting",
+        MSG_delete_comment: "Delete",
+        MSG_offer_will_end_soon: "This offer will end soon",
+        MSG_on_air: "On Air",
+        MSG_file: "File",
+        MSG_download_file: "Download file",
+        MSG_select_session: "Select session...",
+        MSG_terms_coditions: "Terms \u0026 Conditions",
+        MSG_privacy_policy: "Privacy Policy",
+        MSG_disclaimer: "DMCA",
+        MSG_get_calendar_sms_reminder: "Get calendar or SMS reminder",
+        MSG_google_calendar: "Google Calendar",
+        MSG_survey_completed_successfully: "Survey completed successfully",
+        MSG_survey: "Survey",
+        MSG_minutes: "Minutes",
+        MSG_seconds: "Seconds",
+        MSG_unsubscription_successful: "Unsubscription successful",
+        MSG_been_unsubscribed: "You\u0027ve been unsubscribed",
+        MSG_wont_receive_more_emails:
+          "You will not receive any more webinar reminders.",
+        MSG_error: "Error",
+        MSG_connecting: "Connecting to room...",
+        MSG_connecting_to_webinar: "Connecting to webinar room",
+        MSG_it_might_take_up_to: "It might take up to",
+        MSG_do_not_refresh: "Do not refresh this page!",
+        MSG_you_have_registered:
+          "Congratulations... You\u0027ve been registered!",
+        MSG_your_webinar_link: "Your webinar link",
+        MSG_fill_survey:
+          "Fill our quick survey and help us improve our webinar event",
+        MSG_start_survey: "Start the survey",
+        MSG_schedule: "Schedule",
+        MSG_room_password: "Room password",
+        MSG_autosubscription_to_host:
+          "Auto-subscribe to future webinars from this host",
+        MSG_autosubscription: "Auto-registration",
+        MSG_we_sent_email: "We have just sent you an email with a",
+        MSG_confirmation_link: "confirmation link",
+        MSG_click_to_finalize:
+          "which you need to click in order to finalize your auto-registration process.",
+        MSG_next_event_starts_in: "Next event starts in...",
+        MSG_room_full_header: "Oops\u2026 this room is full!",
+        MSG_room_full_text1:
+          "Unfortunately, this room has reached its full capacity of",
+        MSG_room_full_text2:
+          "attendees. You might want to let the event host know.",
+        MSG_replay_not_available_yet: "Replay not ready yet",
+        MSG_why_replay_not_available_yet:
+          "We are still rendering your webinar video. This process can take up to an hour, so please bear with us in the meantime.",
+        Txt_select_time: "Select time...",
+        Txt_timezone: "Timezone",
+        Txt_select_timezone_dots: "Select timezone...",
+        Txt_enter_firstname: "Enter first name...",
+        Txt_lastname: "Last name",
+        Txt_enter_lastname: "Enter last name...",
+        Txt_email: "Email",
+        Txt_enter_email: "Enter email address...",
+        Txt_country: "Country",
+        Txt_select_country: "Select country...",
+        Txt_enter_phone_number: "Enter phone number...",
+        Txt_autosubscribe_info:
+          "This webinar organizer will run new events in the future. Check this box if you would you like to be automatically subscribed to (and notified of) those future events as soon as they are publicly announced. Needless to say, you will be able to opt-out at any time.",
+        Txt_enter_captcha: "Enter captcha...",
+        Msg_registering_to_event: "Registering to event",
+        Msg_please_wait: "Please wait...",
+        Msg_error_registration_1click:
+          "An error occurred and your registration could not be completed. Please contact the event organizer",
+        Txt_set_reminder: "Set reminder",
+        Txt_connecting_to_server: "Checking availability...",
+        Txt_waiting_for_host: "Waiting for host...",
+        Txt_waiting_live_attendee:
+          "Sit tight. As soon as the webinar host logs in, you will be redirected to the live room.",
+        Msg_thank_you_reminder_calendar:
+          "Schedule an entry in your own calendar",
+        Msg_thank_you_reminder_phone:
+          "Phone message 15 minutes before the event",
+        Txt_validation_invalid_url: "Invalid URL",
+        Txt_validation_required_http: "Must have http(s):\/\/",
+        Txt_validation_invalid_video_url: "Invalid video URL",
+        Txt_validation_required_mp3: "Must be .mp3",
+        Txt_validation_invalid_email: "Invalid email",
+        Txt_validation_invalid_number: "Invalid number",
+        Txt_validation_invalid_password: "Invalid password",
+        Txt_validation_invalid_price: "Invalid price",
+        Txt_validation_invalid_captcha: "Invalid captcha",
+        Txt_validation_required: "Required",
+        Txt_validation_required_https: "Must have https:\/\/",
+        Txt_every_day: "Every day",
+        Txt_every: "Every",
+        Txt_send_chat: "Send as chat",
+        Txt_start_broadcast: "Start the broadcast",
+        Txt_connection_problems: "Connection problems?",
+        Txt_message_sent: "Message was sent!",
+        Text_do_not_mark_as_question: "Do not mark as question",
+        Text_chat_mode: "Chat mode",
+        Text_q_a_mode: "Q\u0026A mode",
+        Msg_connecting_to_broadcast: "Connecting to broadcast...",
+        Msg_host_wants_to_redirect:
+          "The webinar host wants to redirect you to another page.",
+        Msg_open_new_tab: "Open in a new tab",
+        Txt_webinar_not_ready_yet: "WEBINAR NOT READY YET!",
+        Txt_this_webinar_expired: "THIS WEBINAR HAS EXPIRED!",
+        Txt_preparing_webinar:
+          "We\u0027re preparing this webinar as we speak, and it should be ready very soon. Please refresh this page in about 60 seconds...",
+        Txt_webinar_already_taken_place:
+          "This webinar has already taken place. Sorry, it seems like you missed it.",
+        Txt_complete: "Complete",
+        Txt_your_host: "Your host",
+        Txt_host: "Host",
+        Txt_register_all_dates: "Register to all dates below",
+        Txt_multiple_dates: "Multiple dates",
+        Txt_multiple_times: "Multiple times",
+        Txt_starts_immediately: "Starts immediately",
+        Txt_starts_in: "Starts in",
+        Txt_starts: "Starts",
+        Txt_tomorrow: "tomorrow",
+        Txt_join_event_in_progress: "Join event in progress",
+        Msg_webinar_does_not_exist: "This webinar does not exist",
+      };
+    </script>
+    <script>
+      window["wj"] = "undefined" === typeof window["wj"] ? [] : window["wj"];
+      window["wj"]["reminders"] =
+        "undefined" === typeof window["wj"]["reminders"]
+          ? []
+          : window["wj"]["reminders"];
+
+      window["wj"]["reminders"] = {
+        googleCalendarUrl:
+          "https:\/\/calendar.google.com\/calendar\/render?action=TEMPLATE\u0026text=How+%22Memory+Flipping%22+Made+This+Teenager+A+Millionaire+By+19+Yrs+Old\u0026dates=20210314T180000Z\/20210314T190000Z\u0026details=Webinar:+How+%22Memory+Flipping%22+Made+This+Teenager+A+Millionaire+By+19+Yrs+Old%0ADescription:+using+a+copy+%26+paste+checklist+%28shared+below%29+you+too+can+use+to+create+insane+results+in+any+area+of+life+-+FAST%0AHost(s):+Peter+Szabo%0AWebinar link:+https%3A%2F%2Fevent.webinarjam.com%2Fgo%2Flive%2F6%2F24v3xs6cl4h41v6al2ok\u0026recur=\u0026location=\u0026trp=false\u0026sprop=name:name:Peter+Szabo",
+        iCalUrl:
+          "https:\/\/event.webinarjam.com\/registration\/reminder\/calendar?ts=1615744800\u0026startTs=20210314T180000Z\u0026endTs=20210314T190000Z\u0026title=How%20%22Memory%20Flipping%22%20Made%20This%20Teenager%20A%20Millionaire%20By%2019%20Yrs%20Old\u0026recur=\u0026details=V2ViaW5hcjorSG93KyUyMk1lbW9yeStGbGlwcGluZyUyMitNYWRlK1RoaXMrVGVlbmFnZXIrQStNaWxsaW9uYWlyZStCeSsxOStZcnMrT2xkXG5EZXNjcmlwdGlvbjordXNpbmcrYStjb3B5KyUyNitwYXN0ZStjaGVja2xpc3QrJTI4c2hhcmVkK2JlbG93JTI5K3lvdSt0b28rY2FuK3VzZSt0bytjcmVhdGUraW5zYW5lK3Jlc3VsdHMraW4rYW55K2FyZWErb2YrbGlmZSstK0ZBU1Rcbkhvc3Qocyk6K1BldGVyK1N6YWJvXG5XZWJpbmFyIGxpbms6K2h0dHBzJTNBJTJGJTJGZXZlbnQud2ViaW5hcmphbS5jb20lMkZnbyUyRmxpdmUlMkY2JTJGMjR2M3hzNmNsNGg0MXY2YWwyb2s%3D",
+        personalInfo: {
+          first_name: "Peter Szabo",
+          last_name: null,
+          email: "ggszabocpa@gmail.com",
+          phone_country_code: null,
+          phone_number: null,
+        },
+        isSMSEnabled: 0,
+        assetsUrl: "https:\/\/app.webinarjam.com\/pagebuilder\/assets",
+        postUrl:
+          "https:\/\/event.webinarjam.com\/registration\/reminders\/k3loqi5clgvnaw9y2aw0gw\/submit",
+      };
+    </script>
+    <script>
+      window["wj"] = "undefined" === typeof window["wj"] ? [] : window["wj"];
+      window["wj"]["survey"] =
+        "undefined" === typeof window["wj"]["survey"]
+          ? []
+          : window["wj"]["survey"];
+
+      window["wj"]["survey"] = [];
+    </script>
+    <div class="active_integrations">
+      <script>
+        (function (w, d, s, l, i) {
+          w[l] = w[l] || [];
+          w[l].push({
+            "gtm.start": new Date().getTime(),
+            event: "gtm.js",
+          });
+          var f = d.getElementsByTagName(s)[0],
+            j = d.createElement(s),
+            dl = l != "dataLayer" ? "&l=" + l : "";
+          j.async = true;
+          j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+          f.parentNode.insertBefore(j, f);
+        })(window, document, "script", "dataLayer", "GTM-5V6MQRD");
+      </script>
+      <noscript
+        ><iframe
+          src="https://www.googletagmanager.com/ns.html?id=GTM-5V6MQRD"
+          height="0"
+          width="0"
+          style="display: none; visibility: hidden"
+        ></iframe
+      ></noscript>
+
+      <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/jquery-countdown/2.0.2/jquery.countdown.css"
+      /><style>
+        *,
+        *:before,
+        *:after {
+          box-sizing: border-box;
+        }
+
+        hr.my-5 {
+          display: none !important;
+        }
+
+        img.main_logo {
+          display: none !important;
+        }
+
+        #clock {
+          max-width: 35em;
+          margin: auto;
+          margin-bottom: 4em;
+        }
+
+        .is-countdown {
+          background: none;
+          border: none;
+        }
+
+        .countdown-row {
+          display: block;
+        }
+
+        .countdown-row:after {
+          display: table;
+          content: "";
+          clear: both;
+        }
+
+        .countdown-section {
+          width: 80px !important;
+          padding: 0 10px;
+          display: inline-block;
+          float: none;
+        }
+
+        .countdown-amount {
+          line-height: 50px !important;
+          border-radius: 100%;
+          display: block;
+          background: #2f2f2f;
+          color: #fff !important;
+          font-weight: bold;
+          border: 5px solid #000;
+          box-shadow: inset 1px 0 0 2px rgba(255, 255, 255, 0.1);
+        }
+
+        .countdown-period {
+          margin-top: 8px;
+          text-transform: uppercase;
+        }
+
+        #clock-title {
+          color: #2f2f2f;
+          text-align: center;
+          font-size: 28px;
+          margin-bottom: 10px;
+          text-transform: uppercase;
+        }
+
+        @media screen and (max-width: 768px) {
+          .header hr {
+            display: none;
+          }
+
+          .container.paddingTop {
+            padding-top: 10px;
+          }
+
+          #clock {
+            margin-bottom: 20px;
+          }
+        }
+      </style>
+      <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-countdown/2.0.2/jquery.plugin.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-countdown/2.0.2/jquery.countdown.min.js"></script>
+      <script>
+        $("#js-body .container")
+          .first()
+          .prepend(
+            '<div class="col-md-12"><h2 id="clock-title">Masterclass Starts In:<\/h2><div id="clock"><\/div><\/div>'
+          );
+
+        var webbyDate = new Date($("#js_date_1").text().trim());
+
+        if (webbyDate < new Date()) {
+          var analyticsCheck = setInterval(function () {
+            if (window.ga && ga.create) {
+              window.location = $("#js_live_link_1").html();
+            }
+          }, 1000);
+        } else {
+          $("#clock").countdown({
+            until: new Date($("#js_date_1").text().trim()),
+            padZeroes: true,
+            expiryUrl: $("#js_live_link_1").html(),
+          });
+
+          $(".webinar-url").hide();
+        }
+      </script>
+    </div>
+    <script
+      type="text/javascript"
+      src="https://event.webinarjam.com/js/registration_embed.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="/js/manifest.js?id=7db827d654313dce4250"
+    ></script>
+    <script
+      type="text/javascript"
+      src="/js/vendor.js?id=e88788405ca6ede70996"
+    ></script>
+    <script
+      type="text/javascript"
+      src="/js/app-survey-bottom-bar.js?id=0f4a0da736690654aff1"
+    ></script>
+    <script
+      type="text/javascript"
+      src="/js/app-reminder-modal.js?id=996d9d37f73adff0c2b6"
+    ></script>
+    <script>
+      (() => {
+        const d = (a, b = 100, c) => (...d) =>
+            clearTimeout(c, (c = setTimeout(a, b, ...d))),
+          c = () => {
+            const i = document.querySelector("img.js_handle_reconnect_btn");
+            if (i) {
+              i.style.display = "none";
+            }
+            setTimeout(() => {
+              const v = window.innerHeight * 0.01;
+              if (i) {
+                i.style.display = "inline";
+              }
+              document.documentElement.style.setProperty("--vh", v + "px");
+            });
+          };
+        window.addEventListener("resize", d(c), false);
+        c();
+      })();
     </script>
   </body>
 </html>
