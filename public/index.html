@@ -847,66 +847,6 @@
                     </div>
                   </div>
                 </div>
-                <div class="card card-sm c_border_grey mb-5">
-                  <div class="card-body">
-                    <div class="row align-items-center justify-content-between">
-                      <div class="col-6">
-                        <div class="details_block d-flex align-items-center justify-content-start">
-                          <i class="wji-chat_bubble mr-3"></i>
-                          <div>
-                            <div class="title font-500 mb-1">
-                              <lang data-tag="Txt_sms_reminder" v-pre="">SMS reminder</lang>
-                            </div>
-                            <div class="subtitle font-300">
-                              Phone message 15 minutes before the event
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-6">
-                        <div class="form-row">
-                          <div class="col-8">
-                            <form class="mb-0">
-                              <div class="form-group mb-0">
-                                <div class="vue-tel-input vtl-ns drop_up">
-                                  <div tabindex="0" class="dropdown">
-                                    <span class="selection">
-                                      <div class="iti-flag us"></div>
-                                      <span class="dropdown-arrow"></span>
-                                    </span>
-                                  </div>
-                                  <input
-                                    type="tel"
-                                    placeholder="Phone number"
-                                    autocomplete="on"
-                                    name="telephone"
-                                    maxlength="25"
-                                  />
-                                </div>
-                              </div>
-                            </form>
-                          </div>
-                          <div class="col-4">
-                            <button
-                              type="button"
-                              class="btn btn-db btn-rect btn-shadow btn-special btn-primary w-100 d-block"
-                            >
-                              <lang data-tag="Text_submit">submit</lang>
-                            </button>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="d-flex align-self-center w-100 text-center align-items-center hide">
-                      <i class="wji-circle_danger font-48 danger d-inline-block mr-3"></i>
-                      <p class="normal mb-0">Some negative text from ajax comes here</p>
-                    </div>
-                    <div class="d-flex align-self-center w-100 text-center align-items-center hide">
-                      <i class="wji-circle_check font-48 success d-inline-block mr-3"></i>
-                      <p class="normal mb-0">Some positive text from ajax comes here</p>
-                    </div>
-                  </div>
-                </div>
               </div>
             </reminder-modal-page>
           </div>
@@ -1027,8 +967,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-countdown/2.0.2/jquery.plugin.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-countdown/2.0.2/jquery.countdown.min.js"></script>
 
+    <!-- SCRIPTS -->
+    <script src="./src/scripts/moment.min.js"></script>
     <script src="./src/scripts/getUrlParams.js"></script>
     <script src="./src/scripts/countDownClock.js"></script>
+    <script src="./src/scripts/generateUrlEvent.js"></script>
 
     <script>
       $().ready(function () {

@@ -1,0 +1,24 @@
+https://now.peterszabo.co/thank-you/?wj_lead_email: sergio@gmial.com
+generateUrlEvent.js:23 wj_lead_first_name: sergio
+generateUrlEvent.js:23 wj_lead_last_name: 
+generateUrlEvent.js:23 wj_lead_phone_country_code: 
+generateUrlEvent.js:23 wj_lead_phone_number: 
+generateUrlEvent.js:23 wj_lead_unique_link_live_room: https://event.webinarjam.com/go/live/6/k3loqi5ckzfq479bx6k7
+generateUrlEvent.js:23 wj_event_ts: 1619773200
+generateUrlEvent.js:23 wj_event_tz: Europe/Berlin
+generateUrlEvent.js:23 wj_next_event_date: Friday, 30 April 2021
+generateUrlEvent.js:23 wj_next_event_time: 11:00 AM
+generateUrlEvent.js:23 wj_next_event_timezone: Amsterdam, Berlin, Bern, Rome, Stockholm, Vienna GMT +2
+
+https://calendar.google.com/calendar/render?action: TEMPLATE
+generateUrlEvent.js:26 text: Webinar test
+generateUrlEvent.js:26 dates: 20210501T110000Z/20210501T120000Z
+generateUrlEvent.js:26 details: Webinar: Webinar test
+Description: Webinar test
+Host(s): Peter Szabo
+Webinar link: https://event.webinarjam.com/go/live/9/543oxspsy2u4vmoh519q
+generateUrlEvent.js:26 recur: 
+generateUrlEvent.js:26 location: 
+generateUrlEvent.js:26 trp: false
+generateUrlEvent.js:26 sprop: name:name:Peter Szabo
+

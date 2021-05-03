@@ -2,6 +2,7 @@
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 
+
 //saving especific params
 const nextEventDate = urlParams.get('wj_next_event_date');
 const nextEventTime = urlParams.get('wj_next_event_time');
@@ -10,7 +11,7 @@ const uniqueLinkLiveRoom = urlParams.get('wj_lead_unique_link_live_room');
 
 //nextEventDate&Time to Date object
 const dateString = nextEventDate +", "+ nextEventTime
-const webiDate = new Date(nextEventDate +", "+ nextEventTime)
+const webiDate = new Date(Date.parse(dateString))
 
 //inserting the date
 const dateSpan = document.createElement("span");
@@ -27,3 +28,4 @@ const liveLink = document.querySelector('#js_live_link_1');
 liveLink.innerHTML = uniqueLinkLiveRoom;
 
 // console.log(queryString);
+
