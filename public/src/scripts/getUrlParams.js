@@ -8,6 +8,7 @@ const nextEventDate = urlParams.get('wj_next_event_date');
 const nextEventTime = urlParams.get('wj_next_event_time');
 const nextEventTimeZone = urlParams.get('wj_next_event_timezone');
 const uniqueLinkLiveRoom = urlParams.get('wj_lead_unique_link_live_room');
+const eventTs = urlParams.get('wj_event_ts')
 
 //nextEventDate&Time to Date object
 const dateString = nextEventDate +", "+ nextEventTime
