@@ -1,6 +1,6 @@
 
 const eventURLTemplateGoogle = 'https://calendar.google.com/calendar/render?action=TEMPLATE&text=here+goes+the+title&dates=date/dateEnd&details=Details&recur=&location=&trp=false&sprop=name:name:Peter+Szabo';
-const eventURLTemplateOutlook = 'https://event.webinarjam.com/registration/reminder/calendar?ts=TS&startTs=startTime&endTs=endTime&title=title%20test&recur=&details=details'
+const eventURLTemplateOutlook = 'https://event.webinarjam.com/registration/reminder/calendar?ts=TS&startTs=startTime&endTs=endTime&title=title%20test&recur=&details=details';
 
 const pad = (number) => {
   if (number < 10) {
@@ -85,15 +85,17 @@ const googleEventLink = decodeURIComponent(googleURLParams.toString())
 const googleEventButton = document.querySelector('#js-google-calendar-link')
 googleEventButton.href = googleEventLink;
 
-// Setting Event URL Params for outlook link
+// Setting Event URL Params for outlook link, don't work... yet
 
 const [dateStart,dateEnd] = getEventDateFormatOutlook(webiDate)
 const details = googleURLParams.get("details")
 const detailsURI = details.replace(/ /gm, "+")
 const detailsEncode = window.btoa(detailsURI)
 
-outlookURLParams.set("ts"=eventTs)
-outlookURLParams.set("startTs"=dateStart)
-outlookURLParams.set(""=)
-outlookURLParams.set(""=)
+outlookURLParams.set("ts",eventTs)
+outlookURLParams.set("title",EVENT_TITLE)
+outlookURLParams.set("startTs",dateStart)
+outlookURLParams.set("endTs",dateEnd)
+outlookURLParams.set("details",detailsEncode)
 
+const outlookEventLink = decodeURIComponent(outlookURLParams.toString())

@@ -22,3 +22,4 @@ generateUrlEvent.js:26 location:
 generateUrlEvent.js:26 trp: false
 generateUrlEvent.js:26 sprop: name:name:Peter Szabo
 
+TEST PARAMS URL
