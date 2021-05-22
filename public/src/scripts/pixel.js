@@ -1,4 +1,6 @@
 
+const PIXEL_ID = 3582534995116622
+
 async function digestMessage(message) {
   const msgUint8 = new TextEncoder().encode(message);                           // encode as (utf-8) Uint8Array
   const hashBuffer = await crypto.subtle.digest('SHA-256', msgUint8);           // hash the message
@@ -7,36 +9,28 @@ async function digestMessage(message) {
   return hashHex;
 }
 
-// const digestHexFirstName = await digestMessage(firstName);
-// const digestHexlastName = await digestMessage(lastName);
-// const digestHexEmail = await digestMessage(email);
+const img = document.createElement("img");
+const indexBody = document.getElementById("js-body")
 
-let digestHexFirstName 
+let digestHexFirstName
 let digestHexlastName 
 let digestHexEmail 
 
-digestMessage(firstName).then(foo => {
-  digestHexFirstName = foo;
-})
-digestMessage(lastName).then(foo => {
-  digestHexLastName = foo;
-})
-digestMessage(email).then(foo => {
-  digestHexEmail = foo;
-})
-
-const img = document.createElement("img");
-
-// const text = 'An obscure body in the S-K System, your majesty. The inhabitants refer to it as the planet Earth.';
-
-// digestMessage = async (message) => {
-//   const msgUint8 = new TextEncoder().encode(message);                           // encode as (utf-8) Uint8Array
-//   const hashBuffer = await crypto.subtle.digest('SHA-256', msgUint8);           // hash the message
-//   const hashArray = Array.from(new Uint8Array(hashBuffer));                     // convert buffer to byte array
-//   const hashHex = hashArray.map(b => b.toString(16).padStart(2, '0')).join(''); // convert bytes to hex string
-//   return hashHex;
-// }
-
-// digestMessage(text).then((foo)=>{
-//   console.log(foo);
-// });
+(async function(){
+  digestHexFirstName = await digestMessage(firstName);
+  digestHexlastName = await digestMessage(lastName);
+  digestHexEmail = await digestMessage(email);
+  
+  img.height = 1;
+  img.width = 1;
+  img.style = "display:none"
+  let imgSrc = `https://www.facebook.com/tr/?id=${PIXEL_ID}&ev=PageView` +
+    `&ud[em]=${digestHexEmail}` +
+    `&ud[fn]=${digestHexFirstName}`
+  
+  if(lastName!="") 
+      imgSrc = imgSrc + `&ud[ln]=${digestHexlastName}`
+  
+  img.src = imgSrc
+  indexBody.appendChild(img)
+})();

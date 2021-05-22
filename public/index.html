@@ -203,7 +203,10 @@
       }
     </style>
 
-    <script>
+    <script src="./src/scripts/getUrlParams.js"></script>
+
+    <!-- google tag manager -->
+    <!-- <script>
       (function (w, d, s, l, i) {
         w[l] = w[l] || [];
         w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
@@ -214,11 +217,18 @@
         j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
         f.parentNode.insertBefore(j, f);
       })(window, document, "script", "dataLayer", "GTM-P6XHSX");
-    </script>
+    </script> -->
   </head>
   <body
     id="js-body"
-    class="js-not-deletable js-builder-actions-inside body_content_center cover-img d-flex align-items-center justify-content-center"
+    class="
+      js-not-deletable js-builder-actions-inside
+      body_content_center
+      cover-img
+      d-flex
+      align-items-center
+      justify-content-center
+    "
     data-widget-target="js-body"
     data-widget-type="background"
     style="
@@ -266,7 +276,14 @@
                       class="presenter_list js-presenter-container js-builder-actions-inside"
                     >
                       <ul
-                        class="custom_presenter_list list-unstyled d-grid grid_presenter_list align-items-center mb-5"
+                        class="
+                          custom_presenter_list
+                          list-unstyled
+                          d-grid
+                          grid_presenter_list
+                          align-items-center
+                          mb-5
+                        "
                       >
                         <li class="js-presenter-repeated d-grid grid_presenter align-items-center">
                           <div>
@@ -282,7 +299,13 @@
                           </div>
                         </li>
                         <li
-                          class="js-presenter-repeated d-grid grid_presenter align-items-center pagebuilder-fade-enter-to"
+                          class="
+                            js-presenter-repeated
+                            d-grid
+                            grid_presenter
+                            align-items-center
+                            pagebuilder-fade-enter-to
+                          "
                         >
                           <div>
                             <img
@@ -435,7 +458,11 @@
                       <!-- here will go the date info -->
                     </p>
                     <div
-                      class="custom_time_zone_convert custom_text_muted_special js_timezone_text mt-1"
+                      class="
+                        custom_time_zone_convert custom_text_muted_special
+                        js_timezone_text
+                        mt-1
+                      "
                     >
                       <p class="mb-0">
                         <span
@@ -601,7 +628,14 @@
           <div class="wj_content wj_d-flex wj_align-items-center wj_justify-content-center">
             <div class="wj_container">
               <div
-                class="wj_row wj_d-block wj_d-md-flex wj_align-items-center wj_text-center wj_text-md-left"
+                class="
+                  wj_row
+                  wj_d-block
+                  wj_d-md-flex
+                  wj_align-items-center
+                  wj_text-center
+                  wj_text-md-left
+                "
               >
                 <div class="wj_col-12 wj_col-md-9">
                   <div id="js-survey-text" class="wj_survey_content wj_mb-4 wj_mb-md-0">
@@ -609,7 +643,13 @@
                   </div>
                 </div>
                 <div
-                  class="wj_col-12 wj_col-md-3 wj_d-md-flex wj_justify-content-md-end wj_align-items-center"
+                  class="
+                    wj_col-12
+                    wj_col-md-3
+                    wj_d-md-flex
+                    wj_justify-content-md-end
+                    wj_align-items-center
+                  "
                 >
                   <div class="wj_ml-0 wj_ml-md-3">
                     <button
@@ -617,7 +657,11 @@
                       id="js-start-survey-btn"
                       data-toggle="modal"
                       data-target="#surveyModal"
-                      class="wj_btn wj_btn-db wj_btn-rect wj_btn-xlg-survey wj_btn-semiblack wj_w-xs-100 js_wj_survey_button js_wj_action_button wj_button_theme_light"
+                      class="
+                        wj_btn wj_btn-db wj_btn-rect wj_btn-xlg-survey wj_btn-semiblack wj_w-xs-100
+                        js_wj_survey_button js_wj_action_button
+                        wj_button_theme_light
+                      "
                       style="background-color: rgba(0, 0, 0, 0.5)"
                     >
                       Start the survey
@@ -817,7 +861,13 @@
                           <div class="col-6">
                             <a
                               id="js-ical-link"
-                              class="btn btn-db btn-rect btn-shadow btn-special btn-w-img btn-outlook w-100 d-flex align-items-center justify-content-center"
+                              class="
+                                btn btn-db btn-rect btn-shadow btn-special btn-w-img btn-outlook
+                                w-100
+                                d-flex
+                                align-items-center
+                                justify-content-center
+                              "
                               target="_blank"
                               href="#iCalUrl"
                               style="visibility: hidden"
@@ -831,7 +881,13 @@
                           </div>
                           <div class="col-6">
                             <a
-                              class="btn btn-db btn-rect btn-shadow btn-special btn-w-img btn-google w-100 d-flex align-items-center justify-content-center"
+                              class="
+                                btn btn-db btn-rect btn-shadow btn-special btn-w-img btn-google
+                                w-100
+                                d-flex
+                                align-items-center
+                                justify-content-center
+                              "
                               data-widget-dynamic="true"
                               data-widget-type="wj-reminder-google"
                               href="#googleCalendarUrl"
@@ -969,22 +1025,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-countdown/2.0.2/jquery.countdown.min.js"></script>
 
     <!-- SCRIPTS -->
-    <script src="./src/scripts/getUrlParams.js"></script>
+    <script src="./src/scripts/setPageInfo.js"></script>
     <script src="./src/scripts/countDownClock.js"></script>
     <script src="./src/scripts/generateUrlEvent.js"></script>
     <script src="./src/scripts/pixel.js"></script>
-
-    <!-- <img
-      height="1"
-      width="1"
-      style="display: none"
-      src="https://www.facebook.com/tr/?id=PIXEL_ID&ev=Purchase
-      &ud[em]=
-      &ud[fn]=
-      &ud[ln]=
-      &cd[value]=0.00
-      &cd[currency]=USD"
-    /> -->
 
     <script>
       $().ready(function () {
@@ -1031,14 +1075,14 @@
         initVideo();
       });
     </script>
-
-    <noscript
+    <!-- google tag manager  -->
+    <!-- <noscript
       ><iframe
         src="https://www.googletagmanager.com/ns.html?id=GTM-P6XHSX"
         height="0"
         width="0"
         style="display: none; visibility: hidden"
       ></iframe
-    ></noscript>
+    ></noscript> -->
   </body>
 </html>
