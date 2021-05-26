@@ -202,11 +202,18 @@
         visibility: hidden;
       }
     </style>
-
-    <script src="./src/scripts/getUrlParams.js"></script>
-
+    <script src="https://cdn.by.wonderpush.com/sdk/1.1/wonderpush-loader.min.js" async></script>
+    <script>
+      window.WonderPush = window.WonderPush || [];
+      WonderPush.push([
+        "init",
+        {
+          webKey: "83df0de668cd727454a9acdf3f0026f3ae73f9dc6054af8ad98f4ea0bd2b6a54",
+        },
+      ]);
+    </script>
     <!-- google tag manager -->
-    <!-- <script>
+    <script>
       (function (w, d, s, l, i) {
         w[l] = w[l] || [];
         w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
@@ -217,7 +224,7 @@
         j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
         f.parentNode.insertBefore(j, f);
       })(window, document, "script", "dataLayer", "GTM-P6XHSX");
-    </script> -->
+    </script>
   </head>
   <body
     id="js-body"
@@ -1025,10 +1032,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-countdown/2.0.2/jquery.countdown.min.js"></script>
 
     <!-- SCRIPTS -->
+    <script src="./src/scripts/getUrlParams.js"></script>
     <script src="./src/scripts/setPageInfo.js"></script>
     <script src="./src/scripts/countDownClock.js"></script>
     <script src="./src/scripts/generateUrlEvent.js"></script>
-    <script src="./src/scripts/pixel.js"></script>
+    <!-- <script src="./src/scripts/pixel.js"></script> -->
 
     <script>
       $().ready(function () {
@@ -1076,13 +1084,13 @@
       });
     </script>
     <!-- google tag manager  -->
-    <!-- <noscript
+    <noscript
       ><iframe
         src="https://www.googletagmanager.com/ns.html?id=GTM-P6XHSX"
         height="0"
         width="0"
         style="display: none; visibility: hidden"
       ></iframe
-    ></noscript> -->
+    ></noscript>
   </body>
 </html>
